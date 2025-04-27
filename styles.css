@@ -1,3 +1,4 @@
+
 body{
     height: 100vh;
     background-color: rgb(214, 206, 206);
@@ -79,6 +80,7 @@ span{
 #list-container{
     display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin-top: 60px;
@@ -107,4 +109,38 @@ span{
     flex-direction: column;
     gap: 5px;
     box-shadow:  0 20px 20px rgba(0,0,0,0.2) ;
+}
+
+@media screen and (max-width: 500px) {
+
+    nav {
+        flex-direction: column; /* Nav verticale pour mieux s'adapter */
+        align-items: center; /* Centre les éléments */
+        gap: 10px;
+    }
+    #list-container {
+    display: flex;
+    flex-direction: row; /* Ils restent alignés en ligne */
+    flex-wrap: wrap; /* Autorise les éléments à passer à la ligne si nécessaire */
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    background-color: rgb(214, 206, 206);
+    gap: 30px;
+    margin-left: 50px;
+
+    }
+
+
+
+    .comme {
+        padding: 50px 20px; /* Moins de padding sur mobile */
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .task-card {
+        width: 40%;
+        max-width: 300px;
+    }
 }
